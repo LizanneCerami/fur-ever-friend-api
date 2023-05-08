@@ -1,7 +1,7 @@
 import functions from 'firebase-functions'
 import express from 'express'
 import cors from 'cors'
-import { getAllDogs } from './src/dogList'
+import { getAllDogs } from './src/dogList.js'
 
 const app = express()
 
@@ -10,8 +10,8 @@ app.use(express.json())
 
 app.get ('/dogList', getAllDogs)
 
-app.listen(3013, () => 
-  console.log('Listening on http://localhost:3013...'))
+app.listen(3013, () => {
+  console.log('Listening on http://localhost:3013...')})
 
 
-// export const api = functions.https.onRequest(app)
+export const api = functions.https.onRequest(app)
