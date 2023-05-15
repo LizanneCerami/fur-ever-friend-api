@@ -9,13 +9,13 @@
     "rewrites": [
       {
         "source": "**",
-        "destination": "/index.html",
         "function": "api"
       }
     ]
   },
   "functions": [
     {
+      "runtime": "nodejs16",
       "source": "functions",
       "codebase": "default",
       "ignore": [
