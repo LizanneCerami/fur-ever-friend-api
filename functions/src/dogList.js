@@ -20,10 +20,4 @@ export async function updateDog(req, res) {
  console.log("update dog: finished")
 }
 
-export async function deleteDog(req, res) {
-  console.log("delete dog:start")
-  const {dogId} = req.params
-  await coll.doc(itemId).delete();
-  getAllDogs(req, res);
-  console.log("delte dog:finished")
-}
+
